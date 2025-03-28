@@ -14,6 +14,7 @@
 		812E8CE82AEFBD410067B997 /* Item.swift in Sources */ = {isa = PBXBuildFile; fileRef = 812E8CE72AEFBD410067B997 /* Item.swift */; };
 		BCA4FD422D96D6C300F7CD6C /* Outcome.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCA4FD412D96D6C300F7CD6C /* Outcome.swift */; };
 		BCA4FD442D96DAA700F7CD6C /* result.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCA4FD432D96DAA700F7CD6C /* result.swift */; };
+		BCA4FD482D96E08500F7CD6C /* Filter.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCA4FD472D96E08500F7CD6C /* Filter.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +27,7 @@
 		812E8CE72AEFBD410067B997 /* Item.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Item.swift; sourceTree = "<group>"; };
 		BCA4FD412D96D6C300F7CD6C /* Outcome.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Outcome.swift; sourceTree = "<group>"; };
 		BCA4FD432D96DAA700F7CD6C /* result.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = result.swift; sourceTree = "<group>"; };
+		BCA4FD472D96E08500F7CD6C /* Filter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Filter.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -59,6 +61,7 @@
 			isa = PBXGroup;
 			children = (
 				812E8CD42AEFBCF30067B997 /* SpellingApp.swift */,
+				BCA4FD462D96E06000F7CD6C /* Functions */,
 				812E8CE52AEFBD210067B997 /* Model */,
 				812E8CE62AEFBD280067B997 /* Views */,
 				812E8CD82AEFBCF30067B997 /* Assets.xcassets */,
@@ -92,6 +95,14 @@
 				812E8CE32AEFBD150067B997 /* QuizView.swift */,
 			);
 			path = Views;
+			sourceTree = "<group>";
+		};
+		BCA4FD462D96E06000F7CD6C /* Functions */ = {
+			isa = PBXGroup;
+			children = (
+				BCA4FD472D96E08500F7CD6C /* Filter.swift */,
+			);
+			path = Functions;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -165,6 +176,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				BCA4FD422D96D6C300F7CD6C /* Outcome.swift in Sources */,
+				BCA4FD482D96E08500F7CD6C /* Filter.swift in Sources */,
 				812E8CD52AEFBCF30067B997 /* SpellingApp.swift in Sources */,
 				BCA4FD442D96DAA700F7CD6C /* result.swift in Sources */,
 				812E8CE82AEFBD410067B997 /* Item.swift in Sources */,
