@@ -18,6 +18,9 @@ struct QuizView: View {
     // The Outcome
     @State var currentOutcome: Outcome = .undetermined
     
+    // An array to store results of user's guesses
+    @State var history: [result] = [] //empty array
+    
     // MARK: Computed properties
     var body: some View {
         VStack {
@@ -65,6 +68,19 @@ struct QuizView: View {
     }
     
     func newWord(){
+        // Add current result to history
+        history.insert(
+            result(
+                item: currentItem,
+                guessprovided: userGuest,
+                outcome: currentOutcome
+            ),
+            at: 0
+        )
+        
+        // DEBUG: What is in the history array
+        print(history)
+        // Reser for a new question
         currentItem = itemsToSpell.randomElement()!
         userGuest = ""
         currentOutcome = .undetermined
