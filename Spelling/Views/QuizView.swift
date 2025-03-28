@@ -31,12 +31,21 @@ struct QuizView: View {
                 // Show outcome shows the string attached to each case in the enumeration
                 Text(currentOutcome.rawValue)
             }
-            
-            // Make it possible to check the guest made
-            Button {
-                checkGuess()
-            } label: {
-                Text("Submit")
+            HStack{
+                // Make it possible to check the guest made
+                Button {
+                    checkGuess()
+                } label: {
+                    Text("Submit")
+                }
+                
+                // Pick a new word
+                Button {
+                    newWord()
+                } label: {
+                    Text("New word")
+                }
+
             }
 
             
@@ -53,6 +62,12 @@ struct QuizView: View {
             print("False")
             currentOutcome = .incorrect
         }
+    }
+    
+    func newWord(){
+        currentItem = itemsToSpell.randomElement()!
+        userGuest = ""
+        currentOutcome = .undetermined
     }
 }
 
