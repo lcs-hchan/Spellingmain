@@ -15,14 +15,22 @@ struct QuizView: View {
     // The User's guest
     @State var userGuest = ""
     
+    // The Outcome
+    @State var currentOutcome: Outcome = .undetermined
+    
     // MARK: Computed properties
     var body: some View {
         VStack {
             Image(currentItem.imageName)
                 .resizable()
                 .scaledToFit()
-            // Allow the user to input their guest
-            TextField("Enter the name of the item", text: $userGuest)
+            HStack{
+                // Allow the user to input their guest
+                TextField("Enter the name of the item", text: $userGuest)
+                
+                // Show outcome shows the string attached to each case in the enumeration
+                Text(currentOutcome.rawValue)
+            }
             
             // Make it possible to check the guest made
             Button {
@@ -40,8 +48,10 @@ struct QuizView: View {
     func checkGuess(){
         if userGuest == currentItem.word{
             print("Correct")
+            currentOutcome = .correct
         }else{
             print("False")
+            currentOutcome = .incorrect
         }
     }
 }
