@@ -21,9 +21,28 @@ struct QuizView: View {
             Image(currentItem.imageName)
                 .resizable()
                 .scaledToFit()
+            // Allow the user to input their guest
+            TextField("Enter the name of the item", text: $userGuest)
+            
+            // Make it possible to check the guest made
+            Button {
+                checkGuess()
+            } label: {
+                Text("Submit")
+            }
+
             
         }
         
+    }
+    
+    // MARK: FUNCRIONS
+    func checkGuess(){
+        if userGuest == currentItem.word{
+            print("Correct")
+        }else{
+            print("False")
+        }
     }
 }
 
